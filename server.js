@@ -67,6 +67,7 @@ app.post('/api/notes', (req, res) => {
 app.delete('/api/notes/:id', (req, res) => {
     fs.readFile('db/db.json', 'utf8', (err, data) => {
         if(err) throw err;
+
         var notes = JSON.parse(data);
         var deleteNote = notes.filter((del) => del.id !== req.params.id);
         fs.writeFileSync('db/db.json', JSON.stringify(deleteNote));
