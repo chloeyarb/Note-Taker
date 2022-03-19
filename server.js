@@ -11,7 +11,7 @@ app.use(express.urlencoded({
     extended: true
 }))
 
-// can use public folder for front end
+// Use public folder for front end
 app.use(express.static('public'));
 
 // HTML Routes
@@ -62,7 +62,7 @@ app.post('/api/notes', (req, res) => {
     });
 })
 
-// Add a delete. Add using the ID 
+// Delete request using the ID 
 
 app.delete('/api/notes/:id', (req, res) => {
     fs.readFile('db/db.json', 'utf8', (err, data) => {
