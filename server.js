@@ -2,8 +2,10 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
+const uuid = require('uuid');
 const PORT = process.env.PORT || 3001;
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
@@ -41,7 +43,9 @@ app.post('/api/notes', (req, res) => {
        // console.log(notes)
 
         var newNote = req.body;
+        newNote.id = uuid.v4();
         console.log(newNote)
+
         var allNotes = [...notes, newNote]
         fs.writeFile('db/db.json', JSON.stringify(allNotes), err =>{
             if(err) throw err;
@@ -59,6 +63,13 @@ app.post('/api/notes', (req, res) => {
 })
 
 // Add a delete. Add using the ID 
+
+app.delete('/api/notes/:id', (req, res) => {
+    fs.readFile('db/db.json', 'utf8', (err, data) => {
+        
+    })
+    // res.send("DELETE Request Called")
+  })
 
 // use your port
 app.listen(PORT,() => console.log(`Listening on port: ${PORT}`));
