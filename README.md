@@ -23,7 +23,7 @@ Chloe Yarborough
 
 ## GitHub
 
-* [GitHub Repo](https://chloeyarb.github.io/Note-Taker/)
+* [GitHub Repo](https://github.com/chloeyarb/Note-Taker)
 
 ## Note Taker App Screenshots
 
