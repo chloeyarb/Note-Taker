@@ -21,6 +21,10 @@ Chloe Yarborough
 
 * [Deployed Link](https://guarded-ocean-94585.herokuapp.com/)
 
+## GitHub
+
+* [GitHub Repo](https://chloeyarb.github.io/Note-Taker/)
+
 ## Note Taker App Screenshots
 
 * [HomePage](./assets/Homepage-Screenshot.png)
